@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-columns-container",
-  "version": "0.0.3",
-  "description": "@usewaypoint/document compatible ColumnsContainer component",
+  "name": "@jusdino-ia/block-columns-container",
+  "version": "0.0.4-alpha.1",
+  "description": "@jusdino-ia/document compatible ColumnsContainer component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-divider",
-  "version": "0.0.4",
-  "description": "@usewaypoint/document compatible Divider component",
+  "name": "@jusdino-ia/block-divider",
+  "version": "0.0.5-alpha.1",
+  "description": "@jusdino-ia/document compatible Divider component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

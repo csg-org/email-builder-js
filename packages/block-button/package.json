@@ -1,7 +1,7 @@
 {
-  "name": "@usewaypoint/block-button",
-  "version": "0.0.3",
-  "description": "@usewaypoint/document compatible Button component",
+  "name": "@jusdino-ia/block-button",
+  "version": "0.0.4-alpha.1",
+  "description": "@jusdino-ia/document compatible Button component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
