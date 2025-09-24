@@ -73,6 +73,8 @@ exports[`block-text renders without markdown 1`] = `
 exports[`block-text sanitizes HTML 1`] = `
 <DocumentFragment>
   <div>
+    
+
     <img
       src="x"
     />

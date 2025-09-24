@@ -1,6 +1,6 @@
 {
   "name": "@jusdino-ia/block-avatar",
-  "version": "0.0.4-alpha.2",
+  "version": "0.0.4-alpha.3",
   "description": "@jusdino-ia/document compatible Avatar component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
