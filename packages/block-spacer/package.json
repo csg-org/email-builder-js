@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-spacer",
+  "name": "@csg-org/block-spacer",
   "version": "0.0.4-alpha.3",
-  "description": "@jusdino-ia/document compatible Spacer component",
+  "description": "@csg-org/document compatible Spacer component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

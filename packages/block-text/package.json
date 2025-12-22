@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-text",
+  "name": "@csg-org/block-text",
   "version": "0.0.7-alpha.3",
-  "description": "@jusdino-ia/document compatible Text component",
+  "description": "@csg-org/document compatible Text component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

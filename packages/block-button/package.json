@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-button",
+  "name": "@csg-org/block-button",
   "version": "0.0.4-alpha.3",
-  "description": "@jusdino-ia/document compatible Button component",
+  "description": "@csg-org/document compatible Button component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

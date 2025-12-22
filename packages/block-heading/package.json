@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-heading",
+  "name": "@csg-org/block-heading",
   "version": "0.0.4-alpha.3",
-  "description": "@jusdino-ia/document compatible Heading component",
+  "description": "@csg-org/document compatible Heading component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

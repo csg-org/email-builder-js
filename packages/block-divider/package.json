@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-divider",
+  "name": "@csg-org/block-divider",
   "version": "0.0.5-alpha.3",
-  "description": "@jusdino-ia/document compatible Divider component",
+  "description": "@csg-org/document compatible Divider component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

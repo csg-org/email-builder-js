@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-columns-container",
+  "name": "@csg-org/block-columns-container",
   "version": "0.0.4-alpha.3",
-  "description": "@jusdino-ia/document compatible ColumnsContainer component",
+  "description": "@csg-org/document compatible ColumnsContainer component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

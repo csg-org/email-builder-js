@@ -1,7 +1,7 @@
 {
-  "name": "@jusdino-ia/block-html",
+  "name": "@csg-org/block-html",
   "version": "0.0.4-alpha.3",
-  "description": "@jusdino-ia/document compatible HTML component",
+  "description": "@csg-org/document compatible HTML component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
