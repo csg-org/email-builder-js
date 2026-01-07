@@ -1,22 +1,22 @@
 {
-  "name": "@usewaypoint/email-builder",
-  "version": "0.0.8",
+  "name": "@csg-org/email-builder",
+  "version": "0.0.9-alpha.3",
   "description": "React component to render email messages",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsup src/index.ts --format cjs,esm --dts --clean"
   },
   "author": "carlos@usewaypoint.com",
   "license": "MIT",
@@ -26,16 +26,16 @@
     "zod": "^1 || ^2 || ^3"
   },
   "dependencies": {
-    "@usewaypoint/block-avatar": "^0.0.3",
-    "@usewaypoint/block-button": "^0.0.3",
-    "@usewaypoint/block-columns-container": "^0.0.3",
-    "@usewaypoint/block-container": "^0.0.2",
-    "@usewaypoint/block-divider": "^0.0.4",
-    "@usewaypoint/block-heading": "^0.0.3",
-    "@usewaypoint/block-html": "^0.0.3",
-    "@usewaypoint/block-image": "^0.0.5",
-    "@usewaypoint/block-spacer": "^0.0.3",
-    "@usewaypoint/block-text": "^0.0.6",
-    "@usewaypoint/document-core": "^0.0.6"
+    "@csg-org/block-avatar": "^0.0.4-alpha.3",
+    "@csg-org/block-button": "^0.0.4-alpha.3",
+    "@csg-org/block-columns-container": "^0.0.4-alpha.3",
+    "@csg-org/block-container": "^0.0.3-alpha.3",
+    "@csg-org/block-divider": "^0.0.5-alpha.3",
+    "@csg-org/block-heading": "^0.0.4-alpha.3",
+    "@csg-org/block-html": "^0.0.4-alpha.3",
+    "@csg-org/block-image": "^0.0.6-alpha.3",
+    "@csg-org/block-spacer": "^0.0.4-alpha.3",
+    "@csg-org/block-text": "^0.0.7-alpha.3",
+    "@csg-org/document-core": "^0.0.7-alpha.3"
   }
 }

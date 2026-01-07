@@ -1,21 +1,22 @@
 {
-  "name": "@usewaypoint/block-avatar",
-  "version": "0.0.3",
-  "description": "@usewaypoint/document compatible Avatar component",
+  "name": "@csg-org/block-avatar",
+  "version": "0.0.4-alpha.3",
+  "description": "@csg-org/document compatible Avatar component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
+    "build": "npx tsup src/index.tsx --format cjs,esm --dts --clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlos@usewaypoint.com",

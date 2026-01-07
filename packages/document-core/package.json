@@ -1,22 +1,22 @@
 {
-  "name": "@usewaypoint/document-core",
-  "version": "0.0.6",
+  "name": "@csg-org/document-core",
+  "version": "0.0.7-alpha.3",
   "description": "Tools to render waypoint-style documents (core package)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsup src/index.ts --format cjs,esm --dts --clean"
   },
   "author": "carlos@usewaypoint.com",
   "license": "MIT",

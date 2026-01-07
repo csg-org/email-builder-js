@@ -116,6 +116,7 @@ exports[`block-text sanitizes HTML 1`] = `
 
     <p>
       <a
+        href="'javascript:alert("
         target="_blank"
       >
         In Quotes

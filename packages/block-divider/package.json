@@ -1,21 +1,22 @@
 {
-  "name": "@usewaypoint/block-divider",
-  "version": "0.0.4",
-  "description": "@usewaypoint/document compatible Divider component",
+  "name": "@csg-org/block-divider",
+  "version": "0.0.5-alpha.3",
+  "description": "@csg-org/document compatible Divider component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
+    "build": "npx tsup src/index.tsx --format cjs,esm --dts --clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlos@usewaypoint.com",
