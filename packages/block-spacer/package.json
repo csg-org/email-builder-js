@@ -1,6 +1,6 @@
 {
   "name": "@csg-org/block-spacer",
-  "version": "0.0.4-alpha.4",
+  "version": "0.0.11",
   "description": "@csg-org/document compatible Spacer component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
