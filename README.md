@@ -7,6 +7,64 @@
   </p>
 </div>
 
+---
+
+## About this fork (CSG)
+
+This repository is a **fork** of the original [usewaypoint/email-builder-js](https://github.com/usewaypoint/email-builder-js), which is no longer maintained. **This fork is maintained by CSG.** Published npm packages use the `@csg-org` scope — install with `npm install @csg-org/email-builder` (not `@usewaypoint/email-builder`).
+
+## Maintainers: Updating and publishing to npm
+
+This fork publishes packages under the `@csg-org` scope. Use the scripts in `bin/` to bump versions and publish to npm.
+
+### Prerequisites
+
+- You must be logged in to npm (`npm login`) and have publish access to the `@csg-org` scope.
+- All packages under `packages/` should be in a consistent state (clean build, tests passing).
+
+### 1. Version management: `bin/version.sh`
+
+The monorepo keeps a single version across all `package.json` files under `packages/`. Use `version.sh` to read or set that version. The **root** `package.json` is intentionally not updated (it remains the original `@usewaypoint-monorepo` version): only the packages under `packages/` are versioned and released, so the root version is irrelevant for npm.
+
+| Command                                  | Description                                                                                                                                                                     |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `./bin/version.sh get`                   | Print the current version (from `packages/email-builder`). Fails if any package version disagrees.                                                                              |
+| `./bin/version.sh audit`                 | Verify that every `packages/*/package.json` has the same `version`.                                                                                                             |
+| `./bin/version.sh upgrade <new-version>` | Set `version` to `<new-version>` in every `packages/*/package.json`, and set all `@csg-org/*` dependency versions in `packages/email-builder/package.json` to `^<new-version>`. |
+
+**Example — bump to a new patch version:**
+
+```bash
+./bin/version.sh get          # e.g. 0.0.11
+./bin/version.sh upgrade 0.0.12
+./bin/version.sh audit        # optional: confirm all versions match
+```
+
+### 2. Publish to npm: `bin/ship-it.sh`
+
+`ship-it.sh` builds and publishes the publishable packages to npm in dependency order:
+
+1. **Block packages** — all `packages/block-*` packages.
+2. **document-core** — `packages/document-core` (same steps).
+3. **email-builder** — `packages/email-builder` (same steps). This package depends on all of the above.
+
+**Example — full release:**
+
+```bash
+./bin/version.sh upgrade 0.0.12
+./bin/ship-it.sh
+```
+
+When prompted, wait until the new block and document-core versions are [visible on npm](https://www.npmjs.com/package/@csg-org/email-builder?activeTab=versions), then press Enter to publish `@csg-org/email-builder`.
+
+**Note:** `packages/editor-sample` is not published; it is only used for local development.
+
+---
+
+**Everything below is the original README.** Code examples use the old `@usewaypoint/email-builder` import; for this fork use `@csg-org/email-builder` instead.
+
+---
+
 ## Introduction
 
 EmailBuilder.js is a free and open-source email template builder for developers. Build emails faster than ever with clean JSON or HTML output that render well across clients and devices.
