@@ -1,6 +1,6 @@
 {
   "name": "@csg-org/email-builder",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "React component to render email messages",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,16 +26,16 @@
     "zod": "^1 || ^2 || ^3"
   },
   "dependencies": {
-    "@csg-org/block-avatar": "^0.0.11",
-    "@csg-org/block-button": "^0.0.11",
-    "@csg-org/block-columns-container": "^0.0.11",
-    "@csg-org/block-container": "^0.0.11",
-    "@csg-org/block-divider": "^0.0.11",
-    "@csg-org/block-heading": "^0.0.11",
-    "@csg-org/block-html": "^0.0.11",
-    "@csg-org/block-image": "^0.0.11",
-    "@csg-org/block-spacer": "^0.0.11",
-    "@csg-org/block-text": "^0.0.11",
-    "@csg-org/document-core": "^0.0.11"
+    "@csg-org/block-avatar": "^0.0.12",
+    "@csg-org/block-button": "^0.0.12",
+    "@csg-org/block-columns-container": "^0.0.12",
+    "@csg-org/block-container": "^0.0.12",
+    "@csg-org/block-divider": "^0.0.12",
+    "@csg-org/block-heading": "^0.0.12",
+    "@csg-org/block-html": "^0.0.12",
+    "@csg-org/block-image": "^0.0.12",
+    "@csg-org/block-spacer": "^0.0.12",
+    "@csg-org/block-text": "^0.0.12",
+    "@csg-org/document-core": "^0.0.12"
   }
 }
