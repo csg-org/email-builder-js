@@ -28,9 +28,9 @@ audit() {
   return 0
 }
 
-# --- get: print current version (from root package.json) ---
+# --- get: print current version (from packages; root is not updated by this script) ---
 get() {
-  sed -n 's/^[[:space:]]*"version":[[:space:]]*"\([^"]*\)".*/\1/p' "$ROOT/package.json"
+  sed -n 's/^[[:space:]]*"version":[[:space:]]*"\([^"]*\)".*/\1/p' "$ROOT/packages/email-builder/package.json"
 }
 
 # --- upgrade: set version in every package.json to the given string ---
