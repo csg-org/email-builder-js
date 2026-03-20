@@ -24,7 +24,7 @@ This fork publishes packages under the `@csg-org` scope. Use the scripts in `bin
 
 ### 1. Version management: `bin/version.sh`
 
-The monorepo keeps a single version across all `package.json` files under `packages/`. Use `version.sh` to read or set that version. The **root** `package.json` is intentionally not updated (it remains the original `@usewaypoint-monorepo` version): only the packages under `packages/` are versioned and released, so the root version is irrelevant for npm.
+The monorepo keeps a single version across all `package.json` files under `packages/`. Use `version.sh` to read or set that version. The **root** `package.json` version is pinned at `0.0.0` — it is not published to npm and is intentionally not updated by `version.sh`.
 
 | Command                                  | Description                                                                                                                                                                     |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,9 +55,17 @@ The monorepo keeps a single version across all `package.json` files under `packa
 ./bin/ship-it.sh
 ```
 
-When prompted, wait until the new block and document-core versions are [visible on npm](https://www.npmjs.com/package/@csg-org/email-builder?activeTab=versions), then press Enter to publish `@csg-org/email-builder`.
+The script pauses after publishing the subpackages. Wait until all `@csg-org` packages show the new version on [npm](https://www.npmjs.com/org/csg-org), then press Enter to publish `@csg-org/email-builder`.
 
-**Note:** `packages/editor-sample` is not published; it is only used for local development.
+You can preview what will happen without actually publishing by passing `--dry-run`:
+
+```bash
+./bin/ship-it.sh --dry-run
+```
+
+**Notes:**
+- `packages/editor-sample` is not published; it is only used for local development.
+- `package-lock.json` files inside each package may drift after `version.sh upgrade`. This is expected — `ship-it.sh` runs `npm install` in each package before publishing, which reconciles them.
 
 ---
 
