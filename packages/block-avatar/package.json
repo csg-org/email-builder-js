@@ -1,6 +1,6 @@
 {
   "name": "@csg-org/block-avatar",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "@csg-org/document compatible Avatar component",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
