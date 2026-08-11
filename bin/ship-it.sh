@@ -19,10 +19,13 @@ build_and_publish() {
     echo "Deploying $package"
     cd "$package"
     # --include=dev: install devDependencies even when NODE_ENV=production or npm config would omit them.
-    # The packages don't declare tsup/typescript, so install them here without saving to package.json;
-    # a local tsup also keeps `npx tsup` from resolving to a global npx cache that may lack tsup's
-    # typescript peer dependency. typescript is pinned to 5.x because tsup's dts step
-    # (rollup-plugin-dts) requires the TypeScript 5.x compiler API and fails on newer major versions.
+    # This also syncs package-lock.json (e.g. version bumps), keeping the repo committable after a release.
+    npm install --include=dev
+    # The packages don't declare tsup/typescript, so install them separately with --no-save, which
+    # keeps them out of package.json and package-lock.json; a local tsup also keeps `npx tsup` from
+    # resolving to a global npx cache that may lack tsup's typescript peer dependency. typescript is
+    # pinned to 5.x because tsup's dts step (rollup-plugin-dts) requires the TypeScript 5.x compiler
+    # API and fails on newer major versions.
     npm install --include=dev --no-save 'typescript@5' tsup
     npm run build
     npm publish --access public --tag latest $DRY_RUN_FLAG
